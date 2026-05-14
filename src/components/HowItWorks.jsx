@@ -1,51 +1,58 @@
-function HowItWorks() {
-  const steps = [
-    {
-      number: '01',
-      title: 'Invia la tua foto',
-      description:
-        'Scegli una foto chiara della persona o del soggetto che vuoi trasformare in PocketMe.',
-    },
-    {
-      number: '02',
-      title: 'Creiamo il modello 3D',
-      description:
-        'Trasformiamo l’immagine in una mini figura digitale curata nei dettagli.',
-    },
-    {
-      number: '03',
-      title: 'Stampiamo e rifiniamo',
-      description:
-        'Realizziamo il PocketMe con stampa 3D di precisione e finiture di qualità.',
-    },
-    {
-      number: '04',
-      title: 'Ricevi il tuo PocketMe',
-      description:
-        'Ottieni un portachiavi personalizzato unico, pronto da portare sempre con te.',
-    },
-  ];
+const paths = [
+  {
+    label: 'PocketMe',
+    title: 'Per persone e ricordi speciali',
+    steps: [
+      'Invia la foto della persona',
+      'Creiamo il modello 3D',
+      'Stampiamo e rifiniamo',
+      'Ricevi il tuo PocketMe',
+    ],
+  },
+  {
+    label: 'PocketPet',
+    title: 'Per animali domestici',
+    steps: [
+      'Invia la foto del tuo animale',
+      'Ricreiamo forma e dettagli',
+      'Stampiamo la mini figura',
+      'Ricevi il tuo PocketPet',
+    ],
+  },
+]
 
+function HowItWorks() {
   return (
     <section className="how-it-works" id="come-funziona">
       <div className="container">
-        <h2 className="section-title">Come funziona</h2>
-        <p className="section-subtitle">
-          Un processo semplice, creativo e innovativo per trasformare una foto in qualcosa di unico.
-        </p>
+        <div className="page-hero">
+          <p className="page-label">Come funziona</p>
+          <h1 className="page-title">Due percorsi, un processo semplice.</h1>
+          <p className="page-description">
+            Da una foto reale a una mini figura 3D personalizzata. Scegli
+            PocketMe per le persone o PocketPet per gli animali del cuore.
+          </p>
+        </div>
 
-        <div className="steps-grid">
-          {steps.map((step) => (
-            <article className="step-card" key={step.number}>
-              <span className="step-number">{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
+        <div className="process-paths">
+          {paths.map((path) => (
+            <article className="process-path-card" key={path.label}>
+              <span className="card-badge">{path.label}</span>
+              <h2>{path.title}</h2>
+              <div className="process-list">
+                {path.steps.map((step, index) => (
+                  <div className="process-list-item" key={step}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <p>{step}</p>
+                  </div>
+                ))}
+              </div>
             </article>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default HowItWorks;
+export default HowItWorks

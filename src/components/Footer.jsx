@@ -4,28 +4,36 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-container">
-
         <div className="footer-brand">
           <h3>PocketMe</h3>
           <p>
-            Trasformiamo le tue foto in mini figure 3D personalizzate.
+            Mini figure 3D personalizzate da foto reali: persone, ricordi e
+            animali trasformati in oggetti unici.
           </p>
+        </div>
+
+        <div className="footer-links">
+          <h4>Prodotti</h4>
+          <Link to="/prodotti">PocketLove</Link>
+          <Link to="/prodotti/pocketme">PocketMe</Link>
+          <Link to="/prodotti/pocketpet">PocketPet</Link>
         </div>
 
         <div className="footer-links">
           <h4>Link utili</h4>
           <Link to="/">Home</Link>
-          <Link to="/prodotti">Prodotti</Link>
-          <Link to="/servizi">Servizi</Link>
+          <Link to="/prodotti">PocketLove</Link>
+          <Link to="/faq">FAQ</Link>
           <Link to="/contatti">Contatti</Link>
         </div>
 
         <div className="footer-contacts">
           <h4>Contatti</h4>
-          <p>Email: info@pocketme.it</p>
-          <p>Telefono: +39 000 000 0000</p>
+          <p>Email: da aggiungere</p>
+          <p>Telefono: da aggiungere</p>
+          <p>WhatsApp: da aggiungere</p>
+          <p>Social: da aggiungere</p>
         </div>
-
       </div>
 
       <div className="footer-bottom">

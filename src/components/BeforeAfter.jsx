@@ -30,12 +30,12 @@ function BeforeAfter() {
         <h2 className="section-title">Da una foto a PocketMe</h2>
 
         <p className="section-subtitle">
-          Trasformiamo le tue foto in mini figure 3D personalizzate.
+          Guarda alcuni esempi reali: dalla foto originale alla mini figura 3D.
         </p>
 
         <div className="before-after-grid">
-          {examples.map((item, index) => (
-            <div className="before-after-card" key={index}>
+          {examples.map((item) => (
+            <div className="before-after-card" key={item.name}>
               <div className="images">
                 <div className="image-box">
                   <span>Prima</span>

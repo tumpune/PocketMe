@@ -12,26 +12,28 @@ function Hero() {
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
-        <p className="hero-subtitle">Innovazione • Personalizzazione • Qualità</p>
+        <p className="hero-subtitle">
+          Persone e animali trasformati in mini figure 3D
+        </p>
 
         <h1 className="hero-title">
-          La tua mini versione,
+          Porta con te chi ami.
           <br />
-          sempre con te
+          In versione mini.
         </h1>
 
         <p className="hero-description">
-          PocketMe trasforma una semplice foto in un portachiavi 3D personalizzato,
-          unico, creativo e ricco di significato.
+          Mini figure 3D personalizzate da foto reali: persone, ricordi e
+          animali trasformati in oggetti unici.
         </p>
 
         <div className="hero-buttons">
-          <Link to="/prodotti" className="btn btn-primary">
-            Scopri di più
+          <Link to="/richiedi-preventivo" className="btn btn-primary">
+            Crea il tuo PocketMe
           </Link>
 
-          <Link to="/contatti" className="btn btn-secondary">
-            Richiedi informazioni
+          <Link to="/prodotti/pocketpet" className="btn btn-secondary">
+            Scopri PocketPet
           </Link>
         </div>
       </div>
