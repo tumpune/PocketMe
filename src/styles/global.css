@@ -38,6 +38,16 @@ img {
 #root {
   min-height: 100vh;
 }
+
+main {
+  min-height: 60vh;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(0, 255, 255, 0.7);
+  outline-offset: 4px;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -179,6 +189,7 @@ img {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
 }
 
 .btn {
@@ -1173,10 +1184,11 @@ main section:not(.hero) h2 {
   cursor: pointer;
 }
 
-.faq-question h3 {
+.faq-question-title {
   font-family: 'Century Gothic', sans-serif;
   font-size: 1.1rem;
   color: #ffffff;
+  font-weight: 700;
 }
 
 .faq-question span {
@@ -1258,6 +1270,19 @@ main section:not(.hero) h2 {
   gap: 20px;
 }
 
+.form-field {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.form-field > span,
+.form-checkbox span {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1295,6 +1320,12 @@ main section:not(.hero) h2 {
 .contact-form .btn {
   border: none;
   cursor: pointer;
+}
+
+.contact-form .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
 }
 
 @media (max-width: 900px) {
@@ -1412,6 +1443,23 @@ main section:not(.hero) h2 {
   cursor: not-allowed;
   opacity: 0.65;
   transform: none;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.form-checkbox input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  padding: 0;
+  border-radius: 4px;
+  accent-color: #00ffff;
 }
 
 @media (max-width: 900px) {
@@ -2239,6 +2287,32 @@ main section:not(.hero) h2 {
   padding: 22px 0;
   border-top: 1px solid rgba(0, 255, 255, 0.08);
   text-align: center;
+}
+
+.not-found-page {
+  padding: 130px 20px;
+  background:
+    radial-gradient(circle at center, rgba(0, 255, 255, 0.09), transparent 36%),
+    linear-gradient(180deg, #050402 0%, #0a0a0a 100%);
+}
+
+.not-found-page .btn {
+  margin-top: 30px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @media (max-width: 1180px) {

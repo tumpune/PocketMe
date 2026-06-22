@@ -1,0 +1,135 @@
+.login-container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 0 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-card {
+  width: min(100%, 460px);
+  padding: 34px;
+  border-radius: 28px;
+  border: 1px solid rgba(0, 255, 255, 0.16);
+  background:
+    radial-gradient(circle at top right, rgba(0, 255, 255, 0.12), transparent 38%),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.36);
+}
+
+.login-header {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.login-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #00ffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.login-header h1 {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.login-header p,
+.login-demo p {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.login-form {
+  display: grid;
+  gap: 18px;
+}
+
+.login-form .form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.login-form label {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.login-form input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 255, 0.16);
+  color: #ffffff;
+  background: rgba(5, 4, 2, 0.85);
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.login-form input:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.09);
+}
+
+.login-form input::placeholder {
+  color: #9ca3af;
+}
+
+.login-btn {
+  min-height: 50px;
+  border: 0;
+  border-radius: 999px;
+  color: #050402;
+  background: #00ffff;
+  cursor: pointer;
+  font-weight: 900;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(0, 255, 255, 0.26);
+}
+
+.login-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.error-message {
+  padding: 13px 14px;
+  border-radius: 14px;
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.24);
+}
+
+.login-demo {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(0, 255, 255, 0.055);
+  border: 1px solid rgba(0, 255, 255, 0.12);
+}
+
+.login-demo p:first-child {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .login-container {
+    width: 92%;
+    padding: 54px 0 80px;
+  }
+
+  .login-card {
+    padding: 24px;
+  }
+}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const navItems = [
@@ -16,6 +16,21 @@ function Navbar() {
 
   const closeMenu = () => setMenuOpen(false)
 
+  useEffect(() => {
+    if (!menuOpen) {
+      return undefined
+    }
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [menuOpen])
+
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -23,7 +38,11 @@ function Navbar() {
           PocketMe
         </Link>
 
-        <nav className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
+        <nav
+          className={`navbar-menu ${menuOpen ? 'active' : ''}`}
+          id="site-navigation"
+          aria-label="Navigazione principale"
+        >
           {navItems.map((item) => (
             <NavLink
               to={item.path}
@@ -46,12 +65,13 @@ function Navbar() {
             className={`hamburger ${menuOpen ? 'open' : ''}`}
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Apri menu"
+            aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
+            aria-controls="site-navigation"
             aria-expanded={menuOpen}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </button>
         </div>
       </div>

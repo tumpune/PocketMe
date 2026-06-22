@@ -63,21 +63,37 @@ function FaqPage() {
         </div>
 
         <div className="faq-list">
-          {faqs.map((faq, index) => (
-            <div
-              className={`faq-item ${activeIndex === index ? 'active' : ''}`}
-              key={faq.question}
-            >
-              <button className="faq-question" type="button" onClick={() => toggleFAQ(index)}>
-                <h3>{faq.question}</h3>
-                <span>{activeIndex === index ? '−' : '+'}</span>
-              </button>
+          {faqs.map((faq, index) => {
+            const isActive = activeIndex === index
+            const questionId = `faq-question-${index}`
+            const answerId = `faq-answer-${index}`
 
-              <div className="faq-answer">
-                <p>{faq.answer}</p>
+            return (
+              <div className={`faq-item ${isActive ? 'active' : ''}`} key={faq.question}>
+                <button
+                  className="faq-question"
+                  type="button"
+                  id={questionId}
+                  onClick={() => toggleFAQ(index)}
+                  aria-expanded={isActive}
+                  aria-controls={answerId}
+                >
+                  <span className="faq-question-title">{faq.question}</span>
+                  <span aria-hidden="true">{isActive ? '−' : '+'}</span>
+                </button>
+
+                <div
+                  className="faq-answer"
+                  id={answerId}
+                  role="region"
+                  aria-labelledby={questionId}
+                  aria-hidden={!isActive}
+                >
+                  <p>{faq.answer}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

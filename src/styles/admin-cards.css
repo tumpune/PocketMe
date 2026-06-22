@@ -1,0 +1,61 @@
+.admin-card {
+  width: 100%;
+  min-height: 136px;
+  padding: 22px;
+  border: 1px solid rgba(0, 255, 255, 0.13);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.028);
+  text-align: left;
+}
+
+.admin-card--button {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.admin-card--button:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 28px rgba(0, 255, 255, 0.08);
+}
+
+.card-icon {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  background: rgba(0, 255, 255, 0.09);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.admin-card--success .card-icon {
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.admin-card--danger .card-icon {
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.card-title {
+  margin-bottom: 8px;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.card-value {
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-weight: 900;
+}

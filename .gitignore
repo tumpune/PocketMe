@@ -11,6 +11,7 @@ node_modules
 .vite
 vite.out
 vite.err
+vite.run.*
 dist
 dist-ssr
 *.local

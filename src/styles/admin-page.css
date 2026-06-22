@@ -1,0 +1,53 @@
+.page-wrapper {
+  display: grid;
+  gap: 22px;
+}
+
+.form-wrapper {
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(0, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.edit-wrapper {
+  border-color: rgba(0, 255, 255, 0.28);
+}
+
+.edit-heading {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.edit-heading h3 {
+  color: #ffffff;
+}
+
+.text-button {
+  border: 0;
+  color: #00ffff;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.message {
+  padding: 14px 16px;
+  border-radius: 16px;
+  line-height: 1.5;
+}
+
+.message.success {
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.24);
+}
+
+.message.error {
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.24);
+}

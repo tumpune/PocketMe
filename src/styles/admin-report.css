@@ -1,0 +1,103 @@
+.report-wrapper {
+  display: grid;
+  gap: 28px;
+}
+
+.report-section {
+  display: grid;
+  gap: 16px;
+}
+
+.report-section h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.report-card {
+  min-height: 132px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.report-card h4 {
+  margin-bottom: 12px;
+  color: #d1d5db;
+  font-size: 0.92rem;
+}
+
+.report-card .amount {
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 900;
+}
+
+.report-card .amount.income,
+.movement-item .item-amount.income {
+  color: #34d399;
+}
+
+.report-card .amount.expense,
+.movement-item .item-amount.expense {
+  color: #f87171;
+}
+
+.average {
+  margin-top: 10px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.movements-list {
+  border: 1px solid rgba(0, 255, 255, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.movement-item {
+  min-height: 70px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+}
+
+.movement-item:last-child {
+  border-bottom: 0;
+}
+
+.item-desc {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.item-meta {
+  color: #9ca3af;
+}
+
+@media (max-width: 1180px) {
+  .report-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movement-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

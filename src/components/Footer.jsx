@@ -28,11 +28,10 @@ function Footer() {
         </div>
 
         <div className="footer-contacts">
-          <h4>Contatti</h4>
-          <p>Email: da aggiungere</p>
-          <p>Telefono: da aggiungere</p>
-          <p>WhatsApp: da aggiungere</p>
-          <p>Social: da aggiungere</p>
+          <h4>Azioni rapide</h4>
+          <Link to="/richiedi-preventivo">Richiedi preventivo</Link>
+          <Link to="/contatti">Scrivici</Link>
+          <p>Le foto di riferimento si inviano dopo il primo contatto.</p>
         </div>
       </div>
 
